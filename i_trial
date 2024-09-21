@@ -24,3 +24,17 @@ class Task {
         return taskString
     }
 }
+
+var t1, t2, t3, t4: Task
+let df = DateFormatter()
+df.dateFormat = "dd-MMM-yyyy"
+t1 = Task("Reg course", "ELEC3644", "Study", df.date(from: "20-Aug-2024" ))
+t2 = Task("Book ticket", "Mirror", "Event", df.date(from: "12-0ct-2024"))
+t3 = Task("Learn driving", "Check availability", "Personal", nil)
+t4 = Task("Attend seminar", "ChatGPT workshop", "Extracurricular", nil)
+print("-
+- Tasks -
+print(t1.toString())
+print(t2.toString())
+print (t3.toString())
+print(t4.toString())
