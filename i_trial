@@ -6,7 +6,7 @@ class Task {
     var category: String
     var dueDate: Date?
 
-    init(title: String, description: String, category: String, dueDate: Date? = nil) {
+    init(_ title: String, _ description: String, _ category: String, _ dueDate: Date?) {
         self.title = title
         self.description = description
         self.category = category
@@ -14,27 +14,24 @@ class Task {
     }
 
     func toString() -> String {
-        var taskString = "Title: \(title)\nDescription: \(description)\nCategory: \(category)"
-        if let dueDate = dueDate {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .short
-            dateFormatter.timeStyle = .short
-            taskString += "\nDue Date: \(dateFormatter.string(from: dueDate))"
-        }
-        return taskString
+        let df = DateFormatter()
+        df.dateFormat = "dd-MMM-yyyy"
+        let dueDateString = dueDate != nil ? df.string(from: dueDate!) : "no due date"
+        return "[\(title)|\(description)|\(category)|\(dueDateString)]"
     }
 }
 
+// Testing the code
 var t1, t2, t3, t4: Task
 let df = DateFormatter()
 df.dateFormat = "dd-MMM-yyyy"
-t1 = Task("Reg course", "ELEC3644", "Study", df.date(from: "20-Aug-2024" ))
-t2 = Task("Book ticket", "Mirror", "Event", df.date(from: "12-0ct-2024"))
+t1 = Task("Reg course", "ELEC3644", "Study", df.date(from: "20-Aug-2024"))
+t2 = Task("Book ticket", "Mirror", "Event", df.date(from: "12-Oct-2024"))
 t3 = Task("Learn driving", "Check availability", "Personal", nil)
 t4 = Task("Attend seminar", "ChatGPT workshop", "Extracurricular", nil)
-print("-
-- Tasks -
+
+print("- Tasks -")
 print(t1.toString())
 print(t2.toString())
-print (t3.toString())
+print(t3.toString())
 print(t4.toString())
