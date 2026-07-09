@@ -4,7 +4,7 @@ Just for casual scripting
 
 Type bash in terminal to start WSL
 
-For code blocks:
+For code blocks:\
 If you hold the apostrophe, you get the pop up with four options and the backtick (`) is on the left.
 ```
 //code here
@@ -57,3 +57,5 @@ class Solution:
         # If the input is None, safely return None.
         return dfs(node) if node else None
 ```
+
+https://share.gemini.google/eqMyfUMR9stR
