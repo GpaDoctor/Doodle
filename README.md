@@ -6,12 +6,15 @@ Type bash in terminal to start WSL
 
 Type anything below for copy:
 
+'''
 
+"""
 # Definition for a Node.
 class Node:
     def __init__(self, val = 0, neighbors = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
+"""
 
 
 class Solution:
@@ -45,3 +48,4 @@ class Solution:
         # Kick off the DFS if the input graph is not empty.
         # If the input is None, safely return None.
         return dfs(node) if node else None
+'''
