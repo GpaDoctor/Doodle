@@ -4,6 +4,8 @@ Just for casual scripting
 
 Type bash in terminal to start WSL
 
+https://thegamma.net/developers/
+
 For code blocks:\
 If you hold the apostrophe, you get the pop up with four options and the backtick (`) is on the left.
 ```
